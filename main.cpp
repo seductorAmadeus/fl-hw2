@@ -7,7 +7,7 @@ enum StateDeterministicFiniteStateMachine
 };
 
 // Returns the accessory of the chain of symbols
-// if current_state != ERROR, then return true,a
+// if current_state != ERROR, then return true,
 // else return false;
 bool CheckStringCondition()
 {
