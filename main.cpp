@@ -3,11 +3,11 @@
 // Set of states deterministic finite state machine
 enum StateDeterministicFiniteStateMachine
 {
-	A, B, C, D, E, F, G, ER
+	A, B, C, D, E, F, G, ERROR
 };
 
 // Returns the accessory of the chain of symbols
-// if current_state != ER, then return true,
+// if current_state != ERROR, then return true,a
 // else return false;
 bool CheckStringCondition()
 {
@@ -27,7 +27,7 @@ bool CheckStringCondition()
 						current_state = B;
 						break;
 					default:
-						current_state = ER;
+						current_state = ERROR;
 						break;
 				}
 				break;
@@ -41,7 +41,7 @@ bool CheckStringCondition()
 						current_state = D;
 						break;
 					default:
-						current_state = ER;
+						current_state = ERROR;
 						break;
 				}
 				break;
@@ -55,7 +55,7 @@ bool CheckStringCondition()
 						current_state = D;
 						break;
 					default:
-						current_state = ER;
+						current_state = ERROR;
 						break;
 				}
 				break;
@@ -72,7 +72,7 @@ bool CheckStringCondition()
 						current_state = F;
 						break;
 					default:
-						current_state = ER;
+						current_state = ERROR;
 						break;
 				}
 				break;
@@ -89,7 +89,7 @@ bool CheckStringCondition()
 						current_state = F;
 						break;
 					default:
-						current_state = ER;
+						current_state = ERROR;
 						break;
 				}
 				break;
@@ -103,7 +103,7 @@ bool CheckStringCondition()
 						current_state = F;
 						break;
 					default:
-						current_state = ER;
+						current_state = ERROR;
 						break;
 				}
 				break;
@@ -117,13 +117,13 @@ bool CheckStringCondition()
 						current_state = F;
 						break;
 					default:
-						current_state = ER;
+						current_state = ERROR;
 						break;
 				}
 				break;
 		}
 		i++;
-	} while (i != str.size() && current_state != ER);
+	} while (i != str.size() && current_state != ERROR);
 	return (current_state == F);
 }
 
